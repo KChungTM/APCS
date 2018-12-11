@@ -31,50 +31,57 @@ public class ebicDance
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //popup = new JFrame();
-        //popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
-        //popupText.setPreferredSize(new Dimension(150,80));   //resizes PopUP
-        //popup.add(popupText);
-        //popup.pack();
-        //popup.setLocationRelativeTo(null);
+	/*
+        JFrame popup = new JFrame();
+        JLabel popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
+        popupText.setPreferredSize(new Dimension(150,80));   //resizes PopUP
+        popup.add(popupText);
+        popup.pack();
+        popup.setLocationRelativeTo(null);
+	*/
 
         butt.addActionListener(new ActionListener()
         {
+	    JLabel popupText;
+
             public void actionPerformed(ActionEvent a)
             {
-                /*
-                JFrame popup = new JFrame();
-                JLabel popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
+		
+		JFrame popup = new JFrame();
+                popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
                 popupText.setPreferredSize(new Dimension(150,80));   //resizes PopUP
                 popup.add(popupText);
                 popup.pack();
                 popup.setLocationRelativeTo(null);
                 popup.setVisible(true);
 
-                for (int i = 3; i > -1; i--)
-                {
-                    popupText.setText(i+"");
+		/*
+		popupText.setText(""+ 1);
+		System.out.println("ming stop");
 
-                    try{Thread.sleep(1500);}
-                    catch(Exception e)
-                    {
+		popupText.setText(""+ 2);
+		System.out.println("YoU bEtTeR sToP");
+		//Thread.sleep(1500);
+		popupText.setText(""+ 3);
+*/
+		//}
 
-                    }
-                }
-                */
-            
-                Icon myImgIcon = new ImageIcon("C:/Users/Kennedy/Desktop/APCS/Graphics/Roblox.mp4");
-                JLabel label = new JLabel(myImgIcon);
-                label.setPreferredSize(new Dimension(500,500));    
+		ActionListener setLabel = new ActionListener() {
+			int num = 3;
+			public void actionPerformed(ActionEvent kenneedsglasses) {
+				System.out.println(num);			
+				popupText.setText(num + "");
+				num--;
+			}
+		};
+		
+		int delay = 1500;
+		new Timer(delay, setLabel);
+		//This runs too much
+		
+	    } 
+        });
 
-                JFrame f = new JFrame("Animation");
-                f.add(label);
-                f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                f.pack();
-                f.setLocationRelativeTo(null);
-                f.setVisible(true);
-            }
-        });       
     }
 } 
 
