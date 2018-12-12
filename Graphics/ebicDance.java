@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.*;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.TimerTask;
+import java.util.Timer;
 
 public class ebicDance
 {
@@ -31,52 +33,104 @@ public class ebicDance
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //popup = new JFrame();
-        //popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
-        //popupText.setPreferredSize(new Dimension(150,80));   //resizes PopUP
-        //popup.add(popupText);
-        //popup.pack();
-        //popup.setLocationRelativeTo(null);
-
         butt.addActionListener(new ActionListener()
         {
-            public void actionPerformed(ActionEvent a)
+            public void actionPerformed(ActionEvent click)
             {
-                /*
                 JFrame popup = new JFrame();
                 JLabel popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
+                Timer timer1 = new Timer();
+
                 popupText.setPreferredSize(new Dimension(150,80));   //resizes PopUP
                 popup.add(popupText);
                 popup.pack();
                 popup.setLocationRelativeTo(null);
+                popup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 popup.setVisible(true);
 
-                for (int i = 3; i > -1; i--)
+                /*
+                ActionListener setLabel = new ActionListener()      //creates method that sets label
                 {
-                    popupText.setText(i+"");
-
-                    try{Thread.sleep(1500);}
-                    catch(Exception e)
+                    int num = 3;
+                    public void actionPerformed(ActionEvent timer)
                     {
-
+                        System.out.println(num);			
+                        popupText.setText(num + "");
+                        num--;
                     }
-                }
+                };
                 */
-            
-                Icon myImgIcon = new ImageIcon("C:/Users/Kennedy/Desktop/APCS/Graphics/Roblox.mp4");
-                JLabel label = new JLabel(myImgIcon);
-                label.setPreferredSize(new Dimension(500,500));    
 
-                JFrame f = new JFrame("Animation");
-                f.add(label);
-                f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                f.pack();
-                f.setLocationRelativeTo(null);
-                f.setVisible(true);
+                TimerTask tt = new TimerTask()
+                {
+                    int countdown = 3;
+                    public void run()
+                    {
+                        System.out.println(countdown);			
+                        popupText.setText(countdown + "");
+                        countdown--; 
+                        if (countdown == 0)
+                        {
+                            timer1.cancel();
+                            popup.setVisible(false);
+                        }
+                    }
+                };
+
+                timer1.schedule(tt, 1, 1500);    
             }
-        });       
+        });
+        try
+        {
+            Thread.sleep(4500);
+        }
+        catch(Throwable e){}
+
+        System.out.println("hi");
+        butt.setVisible(false);
+    }
+}
+    
+
+
+/*
+        butt.addActionListener(new ActionListener()
+        {
+	        JLabel popupText;
+
+                public void actionPerformed(ActionEvent )
+                {
+		            JFrame popup = new JFrame();
+                    popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
+                    popupText.setPreferredSize(new Dimension(150,80));   //resizes PopUP
+                    popup.add(popupText);
+                    popup.pack();
+                    popup.setLocationRelativeTo(null);
+                    popup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    popup.setVisible(true);
+
+
+                    ActionListener setLabel = new ActionListener()
+                    {
+			            int num = 3;
+                        public void actionPerformed(ActionEvent kenneedsglasses)
+                        {
+				            System.out.println(num);			
+				            popupText.setText(num + "");
+				            num--;
+			            }
+		            };
+		
+		            int delay = 1500;
+		            new Timer(delay, setLabel).start();
+		            //This runs too much
+		
+	            } 
+        });
+
     }
 } 
 
 
+*/
 //https://gfycat.com/fittingmaturegrizzlybear
