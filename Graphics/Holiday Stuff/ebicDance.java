@@ -13,6 +13,7 @@ public class ebicDance
         JFrame frame;
         JPanel panel;
         JButton butt;
+        
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(30,30,30,30);
@@ -37,9 +38,10 @@ public class ebicDance
         {
             public void actionPerformed(ActionEvent click)
             {
-                JFrame popup = new JFrame();
-                JLabel popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
-                Timer timer1 = new Timer();
+	
+                final JFrame popup = new JFrame();
+                final JLabel popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
+                final Timer timer1 = new Timer();
 
                 popupText.setPreferredSize(new Dimension(150,80));   //resizes PopUP
                 popup.add(popupText);
@@ -47,19 +49,6 @@ public class ebicDance
                 popup.setLocationRelativeTo(null);
                 popup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 popup.setVisible(true);
-
-                /*
-                ActionListener setLabel = new ActionListener()      //creates method that sets label
-                {
-                    int num = 3;
-                    public void actionPerformed(ActionEvent timer)
-                    {
-                        System.out.println(num);			
-                        popupText.setText(num + "");
-                        num--;
-                    }
-                };
-                */
 
                 TimerTask tt = new TimerTask()
                 {
@@ -69,7 +58,7 @@ public class ebicDance
                         System.out.println(countdown);			
                         popupText.setText(countdown + "");
                         countdown--; 
-                        if (countdown == 0)
+                        if (countdown == -1)
                         {
                             timer1.cancel();
                             popup.setVisible(false);
@@ -90,47 +79,7 @@ public class ebicDance
         butt.setVisible(false);
     }
 }
-    
 
 
-/*
-        butt.addActionListener(new ActionListener()
-        {
-	        JLabel popupText;
+//lmao hi ken
 
-                public void actionPerformed(ActionEvent )
-                {
-		            JFrame popup = new JFrame();
-                    popupText = new JLabel("Get ready in...",null,JLabel.CENTER);
-                    popupText.setPreferredSize(new Dimension(150,80));   //resizes PopUP
-                    popup.add(popupText);
-                    popup.pack();
-                    popup.setLocationRelativeTo(null);
-                    popup.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                    popup.setVisible(true);
-
-
-                    ActionListener setLabel = new ActionListener()
-                    {
-			            int num = 3;
-                        public void actionPerformed(ActionEvent kenneedsglasses)
-                        {
-				            System.out.println(num);			
-				            popupText.setText(num + "");
-				            num--;
-			            }
-		            };
-		
-		            int delay = 1500;
-		            new Timer(delay, setLabel).start();
-		            //This runs too much
-		
-	            } 
-        });
-
-    }
-} 
-
-
-*/
-//https://gfycat.com/fittingmaturegrizzlybear
