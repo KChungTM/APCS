@@ -101,7 +101,8 @@ public class holidayGraphic extends Application implements EventHandler<ActionEv
             MediaView mediaView = new MediaView(player);
 
             layout2.getChildren().add(mediaView);
-
+            
+            /*
             //Initializes Santa Hat
             Polygon triangle = new Polygon();
             triangle.getPoints().addAll(new Double[]{
@@ -115,6 +116,8 @@ public class holidayGraphic extends Application implements EventHandler<ActionEv
 
             //Adds the shapes
             layout2.getChildren().addAll(triangle, circle);
+            */
+            
             //Adds the Media Player to the VBox
             layout1.getChildren().add(layout2);
             //Adds bottom label
