@@ -18,7 +18,10 @@ public class NumberDoubler
 
         //String input = "i eat 8 bread";
 
-        String[] sentence = input.split("\\W");
+        String[] sentence = input.split("\\W+");
+
+        for (int i = 0; i<sentence.length; i++)
+            System.out.println(sentence[i]);
 
         for(String word : sentence)
             {
