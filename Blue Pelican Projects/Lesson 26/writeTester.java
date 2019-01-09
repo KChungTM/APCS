@@ -5,9 +5,12 @@ public class writeTester
 {
     public static void main(String[] args) throws IOException
     {
-        File txt = new File("sampleText1.txt");
+        File txt = new File(args[0]);
         Scanner kboard = new Scanner(txt);
-        FileWriter fw = new FileWriter("sampleText2.txt", true);
+
+        //set false to wipe text file || set true to append to previous
+        FileWriter fw = new FileWriter("sampleText2.txt", false);
+
         PrintWriter output = new PrintWriter(fw);
         String nxtLine;
 
@@ -17,17 +20,17 @@ public class writeTester
             String[] sentence = nxtLine.split("\\D+");
 
             //Prints the split
-            for (String word : sentence)
-                System.out.print(word);
+            //for (String word : sentence)
+            //    System.out.print(word);
             
             //Replaces numbers
-            nxtLine = nxtLine.replaceAll("\\d+", "CaShBeTa><XxXBoi");
+            nxtLine = nxtLine.replaceAll("\\d+", "tExTeDiToRiSaLpHa");
 
             //Replaces phrase with numbers in array
             for (int i = 0; i<sentence.length; i++)
             {
                 if (sentence[i].matches("[0-9]+"))
-                nxtLine = nxtLine.replaceFirst("CaShBeTa><XxXBoi", Integer.parseInt(sentence[i]) * 2 + "");
+                nxtLine = nxtLine.replaceFirst("tExTeDiToRiSaLpHa", Integer.parseInt(sentence[i]) * 2 + "");
             }
         
             System.out.println(nxtLine);
