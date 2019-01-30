@@ -1,0 +1,18 @@
+1. Compile:
+
+	~javac -cp "Source of Jar" (Ex:C://Users/Kennedy/Desktop/GridWorldCode/gridworld.jar) "Name of .java file"
+
+2. Running:
+
+	~java -cp .;"Source of Jar" (Ex:C://Users/Kennedy/Desktop/GridWorldCode/gridworld.jar) "Name of .java file"
+
+Notes:
+
+~ Running the file using java requires ".;" after "-cp" 
+	"." = current directory
+	";" = and
+	"..." = moving back certain amount of directories (... is 3 directories up and so on)
+
+~ Must set source of jar file before compiling and running
+
+	
