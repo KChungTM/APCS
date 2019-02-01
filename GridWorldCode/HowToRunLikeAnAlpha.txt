@@ -13,6 +13,9 @@ Notes:
 	";" = and
 	"..." = moving back certain amount of directories (... is 3 directories up and so on)
 
+~  Java –classpath /classes;/lib/* 
+	use ";" to include multiple files 
+
 ~ Must set source of jar file before compiling and running
 
 	
