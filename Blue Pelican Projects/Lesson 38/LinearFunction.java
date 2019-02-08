@@ -1,4 +1,4 @@
-public class LinearFunction
+public class LinearFunction implements LinearFunctionMethods
 {
     private double Slope;
     private double YIntercept;
