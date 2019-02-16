@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.util.ArrayList;
 import info.gridworld.actor.*;
 import info.gridworld.grid.*;
+import info.gridworld.world.*;
 
 
 public class RadioactiveRock extends Rock
@@ -28,31 +29,56 @@ public class RadioactiveRock extends Rock
 	{
 		for (Actor actors : hitList)
 		{
-			actors.removeSelfFromGrid();
+			if (!(actors instanceof RadioactiveRock))
+				actors.removeSelfFromGrid();
 		}
 	}
 
+	public ArrayList<Location> getEmptyAdjacentLocations()
+	{
+		return getGrid().getEmptyAdjacentLocations(getLocation());
+	}
+
+	public Location selectMoveLocation(ArrayList<Location> locs)
+    {
+        int n = locs.size();
+        if (n == 0)
+            return getLocation();
+        int r = (int) (Math.random() * n);
+        return locs.get(r);
+    }
+
 	public void act()
 	{	
-		/*
-		if(hitList.isEmpty())
+		if(hitList == null)
 		{
 			getActors();
 		}
 		else
 		{
-			if (turnCounter == 3)
+			if(hitList.isEmpty())
 			{
-				processActors();
-				turnCounter = 0;
-				hitList.clear();
+				getActors();
 			}
 			else
 			{
-				turnCounter++;
+				if (turnCounter == 2)
+				{
+					getActors();
+					processActors();
+					turnCounter = 0;
+					hitList.clear();
+				}
+				else
+				{
+					turnCounter++;
+				}
 			}
+			if (getEmptyAdjacentLocations().size() != 0)
+			{
+				RadioactiveRock newRock = new RadioactiveRock();
+				newRock.putSelfInGrid(getGrid(), selectMoveLocation(getEmptyAdjacentLocations()));
+			}	
 		}	
-		*/
-		setDirection(getDirection() + Location.HALF_RIGHT);
 	}
 }
