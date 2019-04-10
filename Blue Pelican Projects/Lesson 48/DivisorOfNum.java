@@ -18,6 +18,7 @@ public class DivisorOfNum
         System.out.print("Please enter an integer: ");
         long n = kboard.nextLong();
         long halfN = n / 2;
+        long squareN = Math.sqrt(n);
         long d = 1;
 
         System.out.println("Which method would you like to see?: ");
@@ -38,7 +39,7 @@ public class DivisorOfNum
                 Optimized(n,d,halfN);
                 break;
             case 3:
-                superOptimized(n,d);
+                superOptimized(n,d,squareN);
                 break;
             default:
                 System.out.println("Bruh >:/");
@@ -93,7 +94,7 @@ public class DivisorOfNum
         System.out.println("Elapsed Time: " + ((end - start)/1000000000.0) + "s");
     }
 
-    public static void superOptimized(long n, long d)
+    public static void superOptimized(long n, long d, long squareN)
     {
         long start = System.nanoTime();
 
@@ -108,7 +109,7 @@ public class DivisorOfNum
             else
                 d++;
         }
-        while(d <= Math.sqrt(n));
+        while(d <= squareN);
         System.out.println(" ");
 
         long end = System.nanoTime();
