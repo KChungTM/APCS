@@ -1,0 +1,3 @@
+In order to find divisors of large numbers and avoid errors when running, use:
+
+- java -Xss(Insert MB of Virtual Memory You Want to Allocate)m ProgramName
