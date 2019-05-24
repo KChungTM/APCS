@@ -1,0 +1,27 @@
+import javax.swing.Jlabel;
+
+public class LevelLabel extends JLabel
+{
+	private int levelNum;
+
+	public LevelLabel()
+	{
+		super("Level: Null");
+	}
+
+	public LevelLabel(int level)
+	{
+		super("Level: " + 1);
+		levelNum = 1;
+	}
+
+	public void setLabel(int level)
+	{
+		setText("Level: " + level); 
+	}
+
+	public int getLabelContent()
+	{
+		return levelNum; 
+	}
+}
