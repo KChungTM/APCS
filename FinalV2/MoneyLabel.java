@@ -1,23 +1,20 @@
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import java.awt.Color;
-import java.awt.Dimension;
 
-public class MoneyLabel extends JLabel implements gameComponent
+public class MoneyLabel extends JLabel
 {
-	private GridBagConstraints loc;
+	private GridBagConstraints c;
 	private int money;
  
 	public MoneyLabel()
 	{
 		super("$:" + 0);
 
-		loc = new GridBagConstraints();
+		c = new GridBagConstraints();
 
 		setFont(this.getFont().deriveFont(25f));
 		setForeground(Color.WHITE);
-
-		setPreferredSize(new Dimension(10, 100));
 	}
 
 	public void setLabel(int cash)
@@ -30,11 +27,9 @@ public class MoneyLabel extends JLabel implements gameComponent
 		return money;
 	}
 
-	public GridBagConstraints getLoc()
+	public GridBagConstraints getConstraints()
 	{
-		loc.gridx = 1;
-		loc.gridy = 0;
-
-		return loc;
+		c.weightx = 0.30;
+		return c;
 	}
 }

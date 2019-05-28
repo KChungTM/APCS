@@ -4,7 +4,7 @@ import java.awt.Color;
 
 public class LevelLabel extends JLabel
 {
-	private GridBagConstraints loc;
+	private GridBagConstraints c;
 	private int levelNum;
 
 	public LevelLabel()
@@ -16,7 +16,7 @@ public class LevelLabel extends JLabel
 	{
 		super("Level: " + 1);
 
-		loc = new GridBagConstraints();
+		c = new GridBagConstraints();
 		levelNum = 1;
 
 		setFont(this.getFont().deriveFont(25f));
@@ -33,11 +33,10 @@ public class LevelLabel extends JLabel
 		return levelNum; 
 	}
 
-	public GridBagConstraints getLoc()
+	public GridBagConstraints getConstraints()
 	{
-		loc.gridx = 0;
-		loc.gridy = 0;
-
-		return loc;
+		c.weightx = 0.70;
+		return c;
 	}
+
 }
