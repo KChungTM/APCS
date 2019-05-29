@@ -24,7 +24,7 @@ public class UnitPanel extends JPanel
         c = new GridBagConstraints();
 
         setLayout(layout);
-        setBackground(Color.BLACK);
+        setBackground(Color.WHITE);
 
         //c.anchor = GridBagConstraints.CENTER;
 
@@ -32,10 +32,10 @@ public class UnitPanel extends JPanel
 
         unitCost = new JLabel("$" + unitNum*50 + "");
 
-	// Got ".setFont() and .deriveFont from StackOverflow example 
-	// of changing JComponents
+	    // Got ".setFont() and .deriveFont from StackOverflow example 
+	    // of changing JComponents
         unitCost.setFont(unitCost.getFont().deriveFont((float)(panelDim.getWidth()/75)));
-        unitCost.setForeground(Color.WHITE);
+        unitCost.setForeground(Color.BLACK);
 
         //Adds Unit Button
         c.ipadx = (int)(panelDim.getWidth()*0.10);

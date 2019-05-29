@@ -15,33 +15,48 @@ import java.io.IOException;
 
 public class Screen extends JLayeredPane 
 {
-    	private GridBagLayout layout;
+	private GridBagLayout layout;
    	private GridBagConstraints c;
 	private BufferedImage bg;
 	private Dimension screenDim;
 
-    	public Screen() throws IOException 
+    	public Screen(Dimension screen) throws IOException 
 	{
 		layout = new GridBagLayout();
 		c = new GridBagConstraints();
+		screenDim = screen;
 
-		bg = resize(ImageIO.read(new File("./download.jpeg")));
+		//Read/Write Tutorial from Earlier in the Year
+		bg = resize(ImageIO.read(new File("./background.jpg")));
 
 		this.setLayout(layout);
 		this.setBackground(Color.WHITE);
 		this.setOpaque(true);
 	}
 
+	//Resizes image by rewriting it onto 
+	//a new BufferedImage object.
+	//Taken from MemoryNotFound
+	//https://memorynotfound.com/java-resize-image-fixed-width-height-example/
 	private BufferedImage resize(Image img)
 	{
-		return bg;
+		Image bigImg = img.getScaledInstance((int)screenDim.getWidth(), (int)(screenDim.getHeight()*0.75), Image.SCALE_SMOOTH);
+		BufferedImage newImg = new BufferedImage((int)screenDim.getWidth(), (int)(screenDim.getHeight()*0.75),BufferedImage.TYPE_3BYTE_BGR);
+
+		Graphics2D g2d = newImg.createGraphics();
+		g2d.drawImage(bigImg,0,0,null);
+		g2d.dispose();
+		return newImg;
 	}
 
 	//Overriding the paint method of JComponent
+	//Taken from StackOverflow.
+	//https://stackoverflow.com/questions/19125707/simplest-way-to-set-image-as-jpanel-background
 	@Override
 	protected void paintComponent(Graphics g)
 	{
-		
+		super.paintComponent(g);
+		g.drawImage(bg, 0, 0, null);
 	}
 
 }

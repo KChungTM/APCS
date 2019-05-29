@@ -69,7 +69,7 @@ public class componentFrame extends JPanel
 
 	public Screen getScreen() throws IOException
 	{
-		Screen gameScreen = new Screen();
+		Screen gameScreen = new Screen(panelDim);
 
 		return gameScreen;
 	}
