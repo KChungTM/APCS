@@ -1,13 +1,14 @@
 import javax.swing.JFrame;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.io.IOException;
 
 public class gameFrame extends JFrame
 {
 	private Toolkit tk;
 	private Dimension screenDimension;
 
-	public gameFrame()
+	public gameFrame() throws IOException
 	{
 		super("Quest for Bread");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE );
@@ -18,14 +19,14 @@ public class gameFrame extends JFrame
 		
 		setSize(screenDimension);
 		setLocationRelativeTo(null);
-		setResizable(true);
+		setResizable(false);
 
 		initGame();
 
 		setVisible(true);
 	}
 
-	public void initGame()
+	public void initGame() throws IOException
 	{
 		add(new componentFrame(screenDimension));
 	}
