@@ -1,0 +1,31 @@
+Resources Used:
+
+Closing JFrames (Default Close Operators)
+-----------------------------------------
+	-http://chortle.ccsu.edu/java5/notes/chap56/ch56_9.html
+	-https://docs.oracle.com/javase/7/docs/api/javax/swing/JFrame.html
+
+Using JLayeredPanel To Create Graphics
+----------------------------------------
+	-https://docs.oracle.com/javase/tutorial/uiswing/components/layeredpane.html
+	-https://www.java2s.com/Code/Java/Swing-JFC/AdemonstrationoftheJLayeredPaneclass.htm
+	-http://www.fis.unipr.it/lca/tutorial/java/ui/swing/layeredpane.html
+
+Adding a Background to my JLayeredPanel
+----------------------------------------
+	-https://stackoverflow.com/questions/19125707/simplest-way-to-set-image-as-jpanel-background
+
+GridBagConstraints Help
+----------------------------------------
+	-https://www.oreilly.com/library/view/learning-java-4th/9781449372477/ch19s06.html
+
+Resizing Images and Writing to BufferedImage
+----------------------------------------
+	-https://www.codejava.net/java-se/graphics/how-to-resize-images-in-java
+
+Using a MouseListener
+----------------------------------------
+	-https://docs.oracle.com/javase/tutorial/uiswing/events/mouselistener.html
+
+
+
