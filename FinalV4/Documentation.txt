@@ -10,6 +10,7 @@ Using JLayeredPanel To Create Graphics
 	-https://docs.oracle.com/javase/tutorial/uiswing/components/layeredpane.html
 	-https://www.java2s.com/Code/Java/Swing-JFC/AdemonstrationoftheJLayeredPaneclass.htm
 	-http://www.fis.unipr.it/lca/tutorial/java/ui/swing/layeredpane.html
+	-https://stackoverflow.com/questions/12126083/moving-jlabels-on-a-jlayeredpane
 
 Adding a Background to my JLayeredPanel
 ----------------------------------------
@@ -26,6 +27,8 @@ Resizing Images and Writing to BufferedImage
 Using a MouseListener
 ----------------------------------------
 	-https://docs.oracle.com/javase/tutorial/uiswing/events/mouselistener.html
+
+-https://stackoverflow.com/questions/5654208/making-a-jbutton-invisible-but-clickable
 
 
 

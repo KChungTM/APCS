@@ -1,4 +1,5 @@
 import javax.swing.JPanel;
+import javax.swing.JLayeredPane;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Dimension;
@@ -13,7 +14,8 @@ public class componentFrame extends JPanel
 	private GridBagConstraints c;
 	private Dimension panelDim;
 	private Thread moneyInc;
-	private MoneyLabel moneyCount;	
+	private MoneyLabel moneyCount;
+	private Screen screen;	
 	
 	public componentFrame(Dimension dim) throws IOException
 	{
@@ -78,7 +80,8 @@ public class componentFrame extends JPanel
 
 	public Screen getScreen() throws IOException
 	{
-		Screen gameScreen = new Screen(panelDim);
+		Screen gameScreen = new Screen(panelDim,moneyCount);
+		screen = gameScreen;
 
 		return gameScreen;
 	}
@@ -92,7 +95,7 @@ public class componentFrame extends JPanel
 		for(int i = 0; i < 5; i++)
 		{
 			c.gridx = i;
-			UnitPanel unitPane = new UnitPanel(i+1, panelDim, moneyCount);
+			UnitPanel unitPane = new UnitPanel(i+1, panelDim, moneyCount, screen);
 			botPane.add(unitPane, c);
 		}
 
@@ -104,5 +107,12 @@ public class componentFrame extends JPanel
 	public Thread getMoneyThread()
 	{
 		return moneyInc;
+	}
+
+	public Thread getUnitMovementThread()
+	{
+		Thread unitMovement = new Thread(screen);		
+
+		return unitMovement; 
 	}
 }

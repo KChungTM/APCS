@@ -2,6 +2,7 @@ import javax.swing.JFrame;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.io.IOException; 
+import java.util.Scanner;
 
 public class gameFrame extends JFrame
 {
@@ -9,6 +10,7 @@ public class gameFrame extends JFrame
 	private Dimension screenDimension;
 	private componentFrame cFrame;
 	private Thread moneyIncrease;
+	private Thread unitMovement;
 
 	public gameFrame() throws IOException
 	{
@@ -16,6 +18,7 @@ public class gameFrame extends JFrame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE );
 
 		tk = Toolkit.getDefaultToolkit();
+		Scanner kb = new Scanner(System.in);
 
 		screenDimension = new Dimension(1024, 768);
 		
@@ -34,7 +37,6 @@ public class gameFrame extends JFrame
 		catch(Exception e) {}
 
 		initGameProcesses();
-
 	}
 
 	public void initGame() throws IOException
@@ -46,7 +48,11 @@ public class gameFrame extends JFrame
 	public void initGameProcesses() 
 	{
 		moneyIncrease = cFrame.getMoneyThread();
-
+		unitMovement = cFrame.getUnitMovementThread();
+		
 		moneyIncrease.start();
+		unitMovement.start();
+
+		
 	}
 }

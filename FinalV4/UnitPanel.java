@@ -1,6 +1,7 @@
 import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import javax.swing.JLayeredPane;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Color;
@@ -19,9 +20,10 @@ public class UnitPanel extends JPanel
 	private JLabel unitCost;
 	private MoneyLabel moneyCount;
 	private int cost;
+	private Screen gameScreen;
 
 
-	public UnitPanel(int unitNum, Dimension panelDim, MoneyLabel moneyCounter)
+	public UnitPanel(int unitNum, Dimension panelDim, MoneyLabel moneyCounter, Screen screen)
 	{
 		super();
 
@@ -29,6 +31,7 @@ public class UnitPanel extends JPanel
 		c = new GridBagConstraints();
 		moneyCount = moneyCounter;
 		cost = unitNum * 50;
+		gameScreen = screen;
 
 		setLayout(layout);
 		setBackground(Color.WHITE);
@@ -36,20 +39,6 @@ public class UnitPanel extends JPanel
 		//c.anchor = GridBagConstraints.CENTER;
 
 		button = new JButton(unitNum + "");
-
-		//Adding ActionListener to Button
-
-		button.addActionListener(new ActionListener()
-					{
-						public void actionPerformed(ActionEvent e)
-						{
-							if(cost<=moneyCount.getMoney())
-							{
-								moneyCount.subtractMoney(cost);
-								System.out.println("Subtracting: " + cost);
-							}
-						}
-					});
 
 		unitCost = new JLabel("$" + cost + "");
 
@@ -71,5 +60,24 @@ public class UnitPanel extends JPanel
 		c.gridx = 0;
 		c.gridy = 1;
 		this.add(unitCost, c);
+
+		//Adding ActionListener to Button
+		button.addActionListener(new ActionListener()
+					{
+						public void actionPerformed(ActionEvent e)
+						{
+							if(cost<=moneyCount.getMoney())
+							{
+								moneyCount.subtractMoney(cost);
+								System.out.println("Subtracting: " + cost);
+
+								switch(cost)
+								{
+									case(50):
+										gameScreen.addUnit(new basicUnit());
+								}
+							}
+						}
+					});
 	}
 }

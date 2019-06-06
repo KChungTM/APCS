@@ -9,7 +9,7 @@ public class Unit extends JLabel
 
 	public Unit()
 	{
-		super();
+		super("haha");
 		xLoc = 0;
 		attackDmg = 10;
 		health = 50;
