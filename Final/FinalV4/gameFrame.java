@@ -4,7 +4,6 @@ import java.awt.Toolkit;
 import java.io.IOException; 
 import java.util.Scanner;
 
-
 public class gameFrame extends JFrame
 {
 	private Toolkit tk;
