@@ -7,10 +7,17 @@ public class Unit extends JLabel
 	private int attackDmg;
 	private int health;
 	private int speed;
+<<<<<<< HEAD:FinalV4/Unit.java
+
+	public Unit(String text)
+	{
+		super(text);
+=======
 	
 	public Unit(ImageIcon pic)
 	{
 		super(pic);
+>>>>>>> 66a773b17dee3b602334d22fabadf6b19337e7b2:Final/FinalV4/Unit.java
 		xLoc = 0;
 		attackDmg = 10;
 		health = 50;

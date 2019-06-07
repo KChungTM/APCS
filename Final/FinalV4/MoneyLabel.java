@@ -49,8 +49,13 @@ public class MoneyLabel extends JLabel implements Runnable
 			}
 			catch(Exception e)  {};
 
+<<<<<<< HEAD:FinalV4/MoneyLabel.java
+			if(money%10 == 0)
+				System.out.println("running: " + money);
+=======
 			//if(money%10 == 0)
 			//	System.out.println("running: " + money);
+>>>>>>> 66a773b17dee3b602334d22fabadf6b19337e7b2:Final/FinalV4/MoneyLabel.java
 		}
 	}
 }

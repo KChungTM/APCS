@@ -8,7 +8,7 @@ Resources Used:
 import javax.swing.JFrame;
 import java.io.IOException;
 
-public class Tester 
+public class TheQuestForBread
 {
 	public static void main(String[] args)  throws IOException
 	{
