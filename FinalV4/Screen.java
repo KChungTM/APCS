@@ -35,6 +35,8 @@ public class Screen extends JLayeredPane implements Runnable
 
 		//Adds money cheat for ease
 		JButton moneyCheat = new JButton(";-;");
+		moneyCheat.setFont(moneyCheat.getFont().deriveFont((float)(20)));
+		moneyCheat.setFocusPainted(false);
 
 		
 		
@@ -50,7 +52,7 @@ public class Screen extends JLayeredPane implements Runnable
 		moneyCheat.setBounds(470,100,100,100);
 		moneyCheat.setOpaque(false);
 		moneyCheat.setContentAreaFilled(false);
-		moneyCheat.setBorderColor(Color.WHITE);
+		moneyCheat.setBorderPainted(false);
 		moneyCheat.setBorderPainted(false);
 
 		this.add(moneyCheat,POPUP_LAYER);
@@ -75,14 +77,14 @@ public class Screen extends JLayeredPane implements Runnable
 				Component[] comps = getComponentsInLayer(FRAME_CONTENT_LAYER);
 				//System.out.print(comps);
 
-				System.out.println("fgdgfdgdg");
+				System.out.println("YEP STILL RUNNING!");
 
 				for(Component comp: comps)
 				{
 					if(comp.getBounds().getX()>200)
 					{
 						comp.setBounds((int)(comp.getBounds().getX() - 50), (int)(comp.getBounds().getY()),200,200);
-						System.out.println("wtf");
+						System.out.println(comp.getBounds().getX() + "," + comp.getBounds().getY());
 					}
 				}
 			}

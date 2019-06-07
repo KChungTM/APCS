@@ -7,9 +7,9 @@ public class Unit extends JLabel
 	private int health;
 	private int speed;
 
-	public Unit()
+	public Unit(String text)
 	{
-		super("haha");
+		super(text);
 		xLoc = 0;
 		attackDmg = 10;
 		health = 50;

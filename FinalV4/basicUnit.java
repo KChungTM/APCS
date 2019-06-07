@@ -1,7 +1,7 @@
 public class basicUnit extends Unit
 {
-	public basicUnit()
+	public basicUnit(String text)
 	{
-		super();
+		super(text);
 	}
 }

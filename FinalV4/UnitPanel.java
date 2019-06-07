@@ -74,7 +74,23 @@ public class UnitPanel extends JPanel
 								switch(cost)
 								{
 									case(50):
-										gameScreen.addUnit(new basicUnit());
+										gameScreen.addUnit(new basicUnit("1"));
+										break;
+									case(100):
+										gameScreen.addUnit(new basicUnit("2"));
+									case(150):
+										gameScreen.addUnit(new basicUnit("3"));
+										break;
+									case(200):
+										gameScreen.addUnit(new basicUnit("4"));
+										break;
+									case(250):
+										gameScreen.addUnit(new basicUnit("5"));
+										break;
+									default:
+										gameScreen.addUnit(new basicUnit("6"));
+										break;
+										
 								}
 							}
 						}

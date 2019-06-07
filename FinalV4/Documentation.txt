@@ -28,7 +28,11 @@ Using a MouseListener
 ----------------------------------------
 	-https://docs.oracle.com/javase/tutorial/uiswing/events/mouselistener.html
 
--https://stackoverflow.com/questions/5654208/making-a-jbutton-invisible-but-clickable
+	-https://stackoverflow.com/questions/5654208/making-a-jbutton-invisible-but-clickable
+
+Getting Rid of Blue Outline of JButton
+----------------------------------------
+	https://stackoverflow.com/questions/9361658/disable-jbutton-focus-border
 
 
 
