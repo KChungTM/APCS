@@ -1,4 +1,5 @@
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class Unit extends JLabel
 {
@@ -6,19 +7,23 @@ public class Unit extends JLabel
 	private int attackDmg;
 	private int health;
 	private int speed;
-
-	public Unit()
+	
+	public Unit(ImageIcon pic)
 	{
-		super();
+		super(pic);
 		xLoc = 0;
 		attackDmg = 10;
 		health = 50;
 		speed = 1;
 	}
 
-	public void action()
+	public Unit(String text)
 	{
-		return;
+		super(text);
+		xLoc = 0;
+		attackDmg = 10;
+		health = 50;
+		speed = 1;
 	}
 
 	public void setLoc(int distance)
@@ -28,7 +33,12 @@ public class Unit extends JLabel
 
 	public int getLoc()
 	{
-		return xLoc;
+		return (int)(this.getBounds().getX());
+	}
+
+	public void setAD(int value)
+	{
+		attackDmg = value;
 	}
 
 	public int getAD()
@@ -39,6 +49,11 @@ public class Unit extends JLabel
 	public int getHealth()
 	{
 		return health;
+	}
+
+	public void setHealth(int ad)
+	{
+		health = health - ad; 
 	}
 
 	public int getSpeed()

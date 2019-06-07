@@ -10,6 +10,7 @@ Using JLayeredPanel To Create Graphics
 	-https://docs.oracle.com/javase/tutorial/uiswing/components/layeredpane.html
 	-https://www.java2s.com/Code/Java/Swing-JFC/AdemonstrationoftheJLayeredPaneclass.htm
 	-http://www.fis.unipr.it/lca/tutorial/java/ui/swing/layeredpane.html
+	-https://stackoverflow.com/questions/12126083/moving-jlabels-on-a-jlayeredpane
 
 Adding a Background to my JLayeredPanel
 ----------------------------------------
@@ -26,6 +27,24 @@ Resizing Images and Writing to BufferedImage
 Using a MouseListener
 ----------------------------------------
 	-https://docs.oracle.com/javase/tutorial/uiswing/events/mouselistener.html
+
+	-https://stackoverflow.com/questions/5654208/making-a-jbutton-invisible-but-clickable
+
+Getting Rid of Blue Outline of JButton
+----------------------------------------
+	https://stackoverflow.com/questions/9361658/disable-jbutton-focus-border
+
+Breaking Out of OuterLoops from Nested Loop
+----------------------------------------
+	-https://stackoverflow.com/questions/886955/how-do-i-break-out-of-nested-loops-in-java
+
+Getting System Time
+----------------------------------------
+	-https://stackoverflow.com/questions/4863658/how-to-get-system-time-in-java-without-creating-a-new-date
+
+Borders
+----------------------------------------
+	-https://stackoverflow.com/questions/29159969/how-to-make-a-border-around-jbutton-thicker/29160012	
 
 
 
