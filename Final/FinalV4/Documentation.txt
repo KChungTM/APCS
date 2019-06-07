@@ -44,7 +44,28 @@ Getting System Time
 
 Borders
 ----------------------------------------
-	-https://stackoverflow.com/questions/29159969/how-to-make-a-border-around-jbutton-thicker/29160012	
+	-https://stackoverflow.com/questions/29159969/how-to-make-a-border-around-jbutton-thicker/29160012
+
+Documentation
+----------------------------------------
+	-https://docs.oracle.com/javase/7/docs/api/javax/swing/ImageIcon.html
+	-https://docs.oracle.com/javase/7/docs/api/javax/swing/border/Border.html
+	-https://docs.oracle.com/javase/7/docs/api/java/awt/Graphics.html
+	-https://docs.oracle.com/javase/7/docs/api/javax/swing/JButton.html
+	-https://docs.oracle.com/javase/7/docs/api/javax/swing/JPanel.html
+	-https://docs.oracle.com/javase/7/docs/api/javax/swing/JLayeredPane.html
+	-https://docs.oracle.com/javase/7/docs/api/javax/swing/JLabel.html
+	-https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html
+	-https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html
+	-https://docs.oracle.com/javase/7/docs/api/java/awt/Dimension.html
+	-https://docs.oracle.com/javase/7/docs/api/java/awt/Toolkit.html
+	-https://docs.oracle.com/javase/7/docs/api/java/awt/event/MouseListener.html
+	-https://docs.oracle.com/javase/7/docs/api/java/awt/image/BufferedImage.html
+	-https://docs.oracle.com/javase/7/docs/api/java/awt/Image.html
+	-https://docs.oracle.com/javase/7/docs/api/java/awt/GridBagLayout.html
+	-https://docs.oracle.com/javase/7/docs/api/java/awt/GridBagConstraints.html
+	-
+	
 
 
 
