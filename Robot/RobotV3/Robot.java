@@ -60,10 +60,10 @@ public class Robot
 		
 		while(!hallIsClear())
 		{
-            move();
-            //System.out.print(moves + "  ");
+            		move();
+            		//System.out.print(moves + "  ");
 			moves++;
-        }
+        	}
         
         //for (int i = 0; i<hall.length; i++)
         //{
